@@ -1,0 +1,9 @@
+{{extend 'layout.html'}}
+<br /><br /><br />
+<h1>Registration</h1>
+<br />
+<p>Please enter your first and last names, email address,Poster title and Abstract.</p>
+<h2>Inputs:</h2>
+{{=form}}
+<h2>Submitted Fields:</h2>
+{{=BEAUTIFY(request.vars)}}

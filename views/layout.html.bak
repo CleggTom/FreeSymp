@@ -1,0 +1,11 @@
+{{include 'web2py_ajax.html'}} {{block head}}{{end}}
+{{=response.logo or ''}}
+{{='auth' in globals() and auth.navbar('Welcome',mode='dropdown') or ''}}
+{{if response.menu:}} {{=MENU(response.menu, _class='nav navbar-nav',li_class='dropdown',ul_class='dropdown-menu')}} {{pass}}
+{{block header}} {{end}}
+{{=response.flash or ''}}
+{{block center}} {{include}} {{end}}
+{{block footer}}
+© Samraat Pawar, {{=request.now.year}}
+{{=T('Powered by')}} web2py
+{{end}} {{block page_js}}{{end page_js}} {{if response.google_analytics_id:}} {{pass}}
