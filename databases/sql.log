@@ -1863,3 +1863,65 @@ success!
 success!
 success!
 success!
+success!
+success!
+timestamp: 2017-07-03T16:55:55.879662
+ALTER TABLE register ADD category TEXT NOT NULL;
+timestamp: 2017-07-03T16:58:01.825601
+ALTER TABLE register ADD category TEXT NOT NULL;
+timestamp: 2017-07-03T16:59:27.831266
+ALTER TABLE register ADD course CHAR(512);
+success!
+success!
+timestamp: 2017-07-03T17:00:37.353286
+ALTER TABLE register ADD category TEXT NOT NULL;
+timestamp: 2017-07-03T17:16:56.800881
+ALTER TABLE register ADD category TEXT;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!

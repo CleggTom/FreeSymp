@@ -131,10 +131,61 @@ auth.settings.reset_password_requires_verification = True
 # -------------------------------------------------------------------------
 # auth.enable_record_versioning(db)
 
+## --------------------------------------------------------------------------------
+## GLOBAL FUNCTIONS
+## --------------------------------------------------------------------------------
+
+def div_checkbox_widget(field, value, **attributes):
+    # provides a horizontal checkbox rubric for three fields
+    # - needs to catch hidden field at end
+    table = SQLFORM.widgets.checkboxes.widget(field, value, **attributes)
+
+    return DIV(*[DIV(DIV(td.element('input'), '  ',
+                         td.element('label')),
+                         _class='col-sm-3', _style='display:inline-block;')
+          for td in table.elements('td') if '_disabled' not in td.element('input').attributes.keys()], _class='row')
+
+
+## --------------------------------------------------------------------------------
+## TABLE DEFINITIONS
+## --------------------------------------------------------------------------------
+
+course_presentation_list = ['Ecological Applications (MSc)',
+                            'Conservation Science (MSc)',
+                            'Computational Methods in Ecology and Evolution (MRes)',
+                            'Computational Methods in Ecology and Evolution (MSc)',
+                            'Tropical Forest Ecology (MRes)',
+                            'Ecology Evolution and Conservation (MRes)',
+                            'Ecology Evolution and Conservation (MSc)',
+                            'Ecosystem and Environmental Change (MRes)',
+                            'Ecosystem and Environmental Change (MSc)']
+types = ['Community Ecology',
+         'Species interactions',
+         'Conservation',
+         'Human wildlife conflicts',
+         'Eco-evo modelling',
+         'Taxonomy',
+         'Behavioural ecology',
+         'Ecosystem dynamics',
+         'Thermal physiology',
+         'Biodiversity',
+         'Phenotypic evolution',
+         'Genetic evolution',
+         'Experimental evolution',
+         'Microbiology',
+         'Population ecology',
+         'Climate change',
+'Plant physiology']
+
+
 db = DAL('sqlite://webform.sqlite')
+
+
 db.define_table('register',
-    Field('first_name', requires=[IS_NOT_EMPTY(), IS_ALPHANUMERIC()]),
-    Field('last_name', requires=[IS_NOT_EMPTY(), IS_ALPHANUMERIC()]),
-    Field('email', unique=True, requires=[IS_NOT_EMPTY(), IS_EMAIL()]),
-    Field('poster_title', requires=[IS_NOT_EMPTY(), IS_ALPHANUMERIC()]),
-    Field('abstract', 'text', required=True, default=''))
+                Field('first_name', requires=[IS_NOT_EMPTY(), IS_ALPHANUMERIC()]),
+                Field('last_name', requires=[IS_NOT_EMPTY(), IS_ALPHANUMERIC()]),
+                Field('email', 'string',unique=True, requires=[IS_NOT_EMPTY(), IS_EMAIL()]),
+                Field('course','string', requires=IS_IN_SET(course_presentation_list)),
+                Field('category', 'list:string', requires=IS_IN_SET(types, multiple=True),widget = div_checkbox_widget, label="Category of your project",comment="Choose 3"),
+                Field('poster_title', 'string',notnull=True),
+                Field('abstract', 'text', required=True, default='', comment="Please copy in your abstract (can be rough - 500 words max)",length=64))

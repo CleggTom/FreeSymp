@@ -67,7 +67,7 @@ def display_your_form():
         redirect(URL('presenters'))
     elif form.errors:
         response.flash = 'Please correct the error(s) in the form'
-
+    
     return dict(form=form)
 
 @auth.requires_login()
