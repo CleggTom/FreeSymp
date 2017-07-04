@@ -177,6 +177,14 @@ types = ['Community Ecology',
          'Climate change',
 'Plant physiology']
 
+level = ['Master',
+         'PhD',
+         'PostDoc',
+         'Other']
+
+present = ['Talk',
+         'Poster']
+
 
 db = DAL('sqlite://webform.sqlite')
 
@@ -185,7 +193,9 @@ db.define_table('register',
                 Field('first_name', requires=[IS_NOT_EMPTY(), IS_ALPHANUMERIC()]),
                 Field('last_name', requires=[IS_NOT_EMPTY(), IS_ALPHANUMERIC()]),
                 Field('email', 'string',unique=True, requires=[IS_NOT_EMPTY(), IS_EMAIL()]),
+                Field('level','string', requires=IS_IN_SET(level)),
                 Field('course','string', requires=IS_IN_SET(course_presentation_list)),
                 Field('category', 'list:string', requires=IS_IN_SET(types, multiple=True),widget = div_checkbox_widget, label="Category of your project",comment="Choose 3"),
-                Field('poster_title', 'string',notnull=True),
+                Field('presentation','string', requires=IS_IN_SET(present),label="Type of presentation"),
+                Field('poster_title', 'string',notnull=True, label="Title of your presentation"),
                 Field('abstract', 'text', required=True, default='', comment="Please copy in your abstract (can be rough - 500 words max)",length=64))

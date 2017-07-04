@@ -1925,3 +1925,14 @@ success!
 success!
 success!
 success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2017-07-04T11:31:54.871047
+ALTER TABLE register ADD level CHAR(512);
+timestamp: 2017-07-04T11:31:54.879030
+ALTER TABLE register ADD presentation CHAR(512);
+success!
+success!
