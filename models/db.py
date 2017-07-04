@@ -158,7 +158,8 @@ course_presentation_list = ['Ecological Applications (MSc)',
                             'Ecology Evolution and Conservation (MRes)',
                             'Ecology Evolution and Conservation (MSc)',
                             'Ecosystem and Environmental Change (MRes)',
-                            'Ecosystem and Environmental Change (MSc)']
+                            'Ecosystem and Environmental Change (MSc)',
+                            'NA']
 types = ['Community Ecology',
          'Species interactions',
          'Conservation',
@@ -175,8 +176,7 @@ types = ['Community Ecology',
          'Microbiology',
          'Population ecology',
          'Climate change',
-         'Plant physiology',
-         'N/A']
+         'Plant physiology']
 
 level = ['Master',
          'PhD',
