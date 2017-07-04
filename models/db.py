@@ -175,7 +175,8 @@ types = ['Community Ecology',
          'Microbiology',
          'Population ecology',
          'Climate change',
-'Plant physiology']
+         'Plant physiology',
+         'N/A']
 
 level = ['Master',
          'PhD',
