@@ -199,4 +199,4 @@ db.define_table('register',
                 Field('category', 'list:string', requires=IS_IN_SET(types, multiple=True),widget = div_checkbox_widget, label="Category of your project",comment="Choose 3"),
                 Field('presentation','string', requires=IS_IN_SET(present),label="Type of presentation"),
                 Field('poster_title', 'string',notnull=True, label="Title of your presentation"),
-                Field('abstract', 'text', required=True, default='', comment="Please copy in your abstract (can be rough - 500 words max)",length=64))
+                Field('abstract', 'text', required=True, default='', comment="Please copy in your abstract (can be rough - 500 words max)",length=500))
