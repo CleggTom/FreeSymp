@@ -11,7 +11,7 @@
 # response.logo = IMG(_src=URL('static','images/imperial_white.png'), _height='70px')
 
 response.title = 'FrEE Symposium 2017'
-response.subtitle = A('Frontiers in Ecology & Evolution 4-7 September', _style="color: white;")
+response.subtitle = A('Frontiers in Ecology & Evolution 5-7 September', _style="color: white;")
     
 ## read more at http://dev.w3.org/html5/markup/meta.name.html
 response.meta.author = 'Sofia Sal <soflysb@gmail.com>'

@@ -478,6 +478,7 @@
 'Welcome': 'Bienvenido',
 'Welcome %s': 'Bienvenido %s',
 'Welcome to the FrEE Symposyum website': 'Welcome to the FrEE Symposyum website',
+'Welcome to the I Symposium in Frontiers in Ecology & Evolution at Silwood Park that will take place in September 2017.': 'Welcome to the I Symposium in Frontiers in Ecology & Evolution at Silwood Park that will take place in September 2017.',
 'Welcome to the I Symposium in Frontiers, Ecology & Evolution at Silwood Park that will take place in September 2017.': 'Welcome to the I Symposium in Frontiers, Ecology & Evolution at Silwood Park that will take place in September 2017.',
 'Welcome to web2py': 'Bienvenido a web2py',
 'Welcome to web2py!': '¡Bienvenido a web2py!',
