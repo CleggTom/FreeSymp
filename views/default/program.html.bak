@@ -1,3 +1,22 @@
 {{extend 'layout.html'}}
-<h1>Está es la plantilla default/program.html</h1>
-{{=BEAUTIFY(response._vars)}}
+
+<center>
+<br/> 
+<h1>Program & Agenda</h1>
+<br/>
+</center>
+
+<center>
+<h3>Invited Speakers</h3>
+<br/>
+<h4>5<sup>th</sup> Sept 13:00 – Prof Judith Mank<br>
+
+6<sup>th</sup> Sept 9:00 – Prof Juliet Osborn<br>
+
+6<sup>th</sup> Sept 13:00 – Angela Saini<br>
+
+7<sup>th</sup> Sept 9:00 – Dr. Lindsay Turnbull<br>
+7<sup>th</sup> Sept 13:00 – Dr. Bea Mass</h4>
+</center>
+<br/>
+<br/>
