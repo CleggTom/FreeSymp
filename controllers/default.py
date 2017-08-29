@@ -73,11 +73,13 @@ def display_your_form():
 
 def schedule():
     db.schedule.id.readable=False
-    grid = SQLFORM.grid((db.schedule),
+    grid = SQLFORM.grid(db.schedule,
                         csv=False,
                         deletable=False,
                         create=False,
                         details=False,
+                        maxtextlength=50,
+                        maxtextlengths={'schedule.Speaker':30,'schedule.Title':120,'schedule.Date':50},
                         formstyle="divs",
                         paginate=100,
                         editable=False)
