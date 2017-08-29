@@ -31,7 +31,10 @@ response.menu = [
     (T('HOME'), False, URL('default', 'index'), []),
     (T('REGISTRATION'), False, URL('display_your_form'), []),
     (T('ACTIVITIES'), False, URL('activities'), []),
-    (T('PROGRAM & AGENDA'), False, 'program'),
+    (T('PROGRAM & AGENDA'),False, None, [
+            (T('Main Program'), False,'program'),
+            (T('Presentations Schedule'),False,'schedule'),
+        ]),
     (T('FOR PRESENTERS'), False, URL('presenters'), []),
     (T('ORGANIZATION'), False, '#', [
        (T('Presenters'), False,URL('all_records'), [])

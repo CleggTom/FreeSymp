@@ -70,6 +70,20 @@ def display_your_form():
     
     return dict(form=form)
 
+
+def schedule():
+    db.schedule.id.readable=False
+    grid = SQLFORM.grid((db.schedule),
+                        csv=False,
+                        deletable=False,
+                        create=False,
+                        details=False,
+                        formstyle="divs",
+                        paginate=100,
+                        editable=False)
+    return dict(form=grid)
+ 
+
 @auth.requires_login()
 def all_records():
      grid = SQLFORM.grid(db.register,
