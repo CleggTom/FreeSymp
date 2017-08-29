@@ -1974,3 +1974,47 @@ success!
 success!
 success!
 success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2017-08-29T15:38:37.588078
+CREATE TABLE "schedule"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "Session_Theme" CHAR(512),
+    "Speaker" CHAR(512),
+    "Title" CHAR(512),
+    "Date" CHAR(512),
+    "Time" CHAR(512),
+    "Location" CHAR(512)
+);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!

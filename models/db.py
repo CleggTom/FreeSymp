@@ -178,7 +178,7 @@ types = ['Community Ecology',
          'Climate change',
          'Plant physiology']
 
-level = ['Master',
+level = ['Masters',
          'PhD',
          'PostDoc',
          'Other']
@@ -199,11 +199,11 @@ db.define_table('register',
                 Field('category', 'list:string', requires=IS_IN_SET(types, multiple=True),widget = div_checkbox_widget, label="Category of your project",comment="Choose 3"),
                 Field('presentation','string', requires=IS_IN_SET(present),label="Type of presentation"),
                 Field('poster_title', 'string',notnull=True, label="Title of your presentation"),
-                Field('abstract', 'text', required=True, default='', comment="Please copy in your abstract (can be rough - 500 CHARACTERS MAX). It should contain: 1) A line of context (intro/antecedents); 2) A line explaining your aim; 3) A line of approach; 4) A line showing a very brief explanation of the results (expected results, if you don't have them yet)",length=500,requires=[IS_LENGTH(maxsize=500)]))
+                Field('abstract', 'text', required=True, default='', comment="Please copy in your abstract (can be rough - 500 CHARACTERS MAX). It could contain: 1) A line of context (intro/antecedents); 2) A line about your project aims; 3) A line on approach used; 4) A line  on the main results (expected results, if you don't have them yet)",length=500,requires=[IS_LENGTH(maxsize=500)]))
 
 
 db.define_table('schedule',
-                Field('Session_Theme', 'string',label='Sesshion Theme'),
+                Field('Session_Theme', 'string',label='Session Theme'),
                 Field('Speaker', 'string'),
                 Field('Title', 'string'),
                 Field('Date','string'),

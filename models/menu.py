@@ -16,7 +16,7 @@ response.subtitle = A('Frontiers in Ecology & Evolution 5-7 September', _style="
 ## read more at http://dev.w3.org/html5/markup/meta.name.html
 response.meta.author = 'Sofia Sal <soflysb@gmail.com>'
 response.meta.description = 'FrEE Symposium website'
-response.meta.keywords = 'Conservation, Ecology, Evolution, Symposyum'
+response.meta.keywords = 'Student led Ecology, Evolution, Conservation Symposium at Silwood Park, Imperial College London'
 # response.meta.generator = 'Web2py Web Framework'
 
 ## your http://google.com/analytics id
@@ -29,14 +29,14 @@ response.google_analytics_id = None
 
 response.menu = [
     (T('HOME'), False, URL('default', 'index'), []),
-    (T('REGISTRATION'), False, URL('display_your_form'), []),
-    (T('ACTIVITIES'), False, URL('activities'), []),
-    (T('PROGRAM & AGENDA'),False, None, [
-            (T('Main Program'), False,'program'),
-            (T('Presentations Schedule'),False,'schedule'),
+    # (T('REGISTRATION'), False, URL('display_your_form'), []),
+    # (T('ACTIVITIES'), False, URL('activities'), []),
+    (T('PROGRAM'),False, None, [
+            (T('Overall Program'), False,'program'),
+            (T('Schedule of Presentations'),False,'schedule'),
         ]),
     (T('FOR PRESENTERS'), False, URL('presenters'), []),
-    (T('ORGANIZATION'), False, '#', [
-       (T('Presenters'), False,URL('all_records'), [])
-        ])
+    # (T('ORGANIZATION'), False, '#', [
+       # (T('Presenters'), False,URL('all_records'), [])
+        # ])
 ]
