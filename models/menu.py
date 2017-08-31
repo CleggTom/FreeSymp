@@ -33,6 +33,7 @@ response.menu = [
     # (T('ACTIVITIES'), False, URL('activities'), []),
     (T('PROGRAM'),False, None, [
             (T('Overall Program'), False,'program'),
+            (T('Sessions'), False,'sessions'),
             (T('Schedule of Presentations'),False,'schedule'),
         ]),
     (T('FOR PRESENTERS'), False, URL('presenters'), []),

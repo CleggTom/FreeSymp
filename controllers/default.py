@@ -101,5 +101,8 @@ def activities():
 def program():
     return locals()
 
+def sessions():
+    return locals()
+    
 def presenters():
     return locals()
